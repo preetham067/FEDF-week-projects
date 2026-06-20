@@ -1,0 +1,10 @@
+.formWrapper { display: flex; justify-content: center; padding-top: 20px; }
+.formPanel { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); width: 100%; max-width: 450px; }
+.formTitle { font-size: 1.2rem; font-weight: bold; margin-bottom: 20px; }
+.fieldsGrid { display: flex; flex-direction: column; gap: 16px; }
+.formGroup { display: flex; flex-direction: column; gap: 6px; }
+.formGroup label { font-size: 0.85rem; font-weight: 500; color: #374151; }
+.controlField { border: 1px solid #d1d5db; border-radius: 6px; padding: 10px; font-size: 0.9rem; background-color: white; }
+.fontMono { font-family: monospace; }
+.submitBtn { background-color: #2563eb; color: white; font-weight: bold; border: none; padding: 12px; border-radius: 6px; cursor: pointer; margin-top: 10px; font-size: 0.95rem; }
+.submitBtn:hover { background-color: #1d4ed8; }

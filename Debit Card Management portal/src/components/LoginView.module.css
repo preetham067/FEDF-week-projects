@@ -1,0 +1,206 @@
+/* Container framework wrapper setup */
+.authWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0b0f19;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(29, 78, 216, 0.08) 0px, transparent 50%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ambient glowing orbs in background layout */
+.glowCircle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: 1;
+    opacity: 0.4;
+}
+.circleOne {
+    width: 400px;
+    height: 400px;
+    background: #2563eb;
+    top: -10%;
+    left: -10%;
+}
+.circleTwo {
+    width: 500px;
+    height: 500px;
+    background: #1d4ed8;
+    bottom: -15%;
+    right: -10%;
+}
+
+/* Glassmorphism premium login card framework core layout */
+.loginCard {
+    background: rgba(255, 255, 255, 0.96);
+    padding: 48px 40px;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 
+        0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    z-index: 5;
+    animation: cardEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.brandBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: #eff6ff;
+    color: #1e40af;
+    font-weight: 800;
+    font-size: 0.72rem;
+    border-radius: 999px;
+    letter-spacing: 1.5px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(37, 99, 235, 0.1);
+}
+.bankIcon {
+    font-size: 0.9rem;
+}
+
+.title {
+    font-size: 1.85rem;
+    color: #0f172a;
+    margin: 0 0 10px 0;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+.subtitle {
+    font-size: 0.88rem;
+    color: #475569;
+    margin: 0 0 32px 0;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+.authForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.inputGroup label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #334155;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+}
+
+/* Composite inline icon wrapper rules */
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.fieldIcon {
+    position: absolute;
+    left: 14px;
+    font-size: 1rem;
+    color: #64748b;
+    pointer-events: none;
+    transition: color 0.2s;
+}
+
+.inputWrapper input {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 14px 14px 14px 44px;
+    font-size: 0.95rem;
+    color: #0f172a;
+    background: #f8fafc;
+    transition: all 0.2s ease;
+}
+.inputWrapper input::placeholder {
+    color: #94a3b8;
+}
+.inputWrapper input:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+.inputGroup:focus-within .fieldIcon {
+    color: #2563eb;
+}
+
+/* Premium action interaction components layout button styles */
+.submitBtn {
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 12px;
+    letter-spacing: 0.2px;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.submitBtn:hover {
+    background: #1d4ed8;
+    box-shadow: 0 6px 20px rgba(29, 78, 216, 0.3);
+    transform: translateY(-1px);
+}
+.submitBtn:active {
+    transform: translateY(1px);
+}
+.submitBtn:disabled {
+    background: #64748b;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.loader {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.9;
+}
+
+.noticeText {
+    margin-top: 32px;
+    font-size: 0.72rem;
+    color: #64748b;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    letter-spacing: 0.2px;
+}
+
+/* Animations mapping pipelines keys triggers layout overrides */
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
